@@ -1,0 +1,3 @@
+#GlassFish 3
+#Wed Feb 01 21:04:08 CST 2017
+org.eclipse.jst.jee.server\:SIGAB=C\:\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\SIGAB
