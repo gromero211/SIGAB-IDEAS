@@ -36,11 +36,18 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 
-
+<!--Mascaras-->
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
 
 <script src="../alert/sweetalert.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="../alert/sweetalert.css">
 
+<script>
+	$(document).ready(function($){
+		$('#codigo').mask('999-999999-9999a')
+	})
+</script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -306,7 +313,7 @@
   		<div style="width: auto; float: right">
    			<button type="button" class="btn btn-default navbar-btn">Sign in</button>
    			<button type="button" class="btn btn-default navbar-btn">Sign in</button>
-   			<a data-toggle="modal" href="#nuevoEstudiante" class="btn btn-primary btn-large">Registrar Estudiante</a>
+   			<a data-toggle="modal" href="#nuevoEstudiante" class="btn btn-primary btn-large">Registrar Estudiante</a>&nbsp;&nbsp;
    		</div>
    		<br><br><br>
     		
@@ -352,7 +359,7 @@
     </div>
     <strong>Copyright &copy; 2017. Instituto Nacional de Excelencia Académica Sandino - IDEAS.</strong> Todos los derechos reservados</footer>
 <!--Ventana emergente nuevo estudiante-->
-<div class="modal fade" id="nuevoEstudiante" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="false">
+<div class="modal fade" fade" data-backdrop="static" data-keyboard="false" id="nuevoEstudiante" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="false">
    <div class="modal-dialog">
      <form action="estudiante" method="post">
       <div class="modal-content">
@@ -373,7 +380,7 @@
             <div class="box-body col-lg-4">
                 <div class="form-group">
                   <label for="exampleInputEmail1"><font><font class="">Código</font></font></label>
-                  <input type="text" class="form-control" id="codigo" placeholder="ABCD-123456-1234567" name="codigo" required>
+                  <input type="text" class="form-control" id="codigo" name="codigo" required>
                 </div>
                 
               </div>
@@ -467,8 +474,8 @@
                 </div>
               </div>
               <div class="box-footer">
-              <div style="margin:auto; width:159px">
-                <button type="submit" onClick="alertaGuardar()" class="btn btn-primary">Guardar<br>
+              <div style="margin:auto; width:auto">
+                <button type="submit" class="btn btn-primary">Guardar<br>
                 </button>
                 <!--<button type="reset" class="btn btn-danger">Cancelar<br>
                 </button>-->
